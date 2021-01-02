@@ -21,4 +21,10 @@ export class HeroService {
     this.messageService.add('HeroService: fetched horses');
     return of (HEROES);
   }
+
+  // @ts-ignore
+  getHero(id: number): Observable<Hero> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`HeroService: fetched her id=${id}`);
+  }
 }
